@@ -1,7 +1,7 @@
-require('dotenv').config();
-const express = require('express');
-const mongoose = require('mongoose');
-const { startCronJobs } = require('../utility/cronJobs');
+import dotenv from "dotenv";
+import express from "express";
+import mongoose from "mongoose";
+import {startCronJobs} from "./utility/cronJobs.js";
 
 const app = express();
 const port = process.env.PORT || 3000;

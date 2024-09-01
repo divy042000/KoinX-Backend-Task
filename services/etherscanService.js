@@ -1,11 +1,9 @@
 import fetch from 'node-fetch';
-import 'dotenv/config';
 
 export const getTransactions = async () => {
   const address = '0xce94e5621a5f7068253c42558c147480f38b5e0d';
   const apiKey = process.env.ETHERSCAN_API_KEY;
-  console.log('API Key:', apiKey); // Be careful about logging your API key
-
+ 
   if (!apiKey) {
     console.error('ETHERSCAN_URL_KEY is not set in environment variables');
     throw new Error('API key is missing');

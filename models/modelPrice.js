@@ -1,10 +1,10 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose'; // Use `import` for Mongoose in ESM
 
 const priceSchema = new mongoose.Schema({
-  timestamp: { type: Date, default: Date.now },
-  price: Number,
+  timestamp: { type: Date, default: Date.now }, // Schema definition with default timestamp
+  price: Number, // Price field of type Number
 });
 
-const Price = mongoose.model('Price', priceSchema);
+const etherPrice = mongoose.model('Price', priceSchema); // Define the model
 
-module.exports = Price;
+export default etherPrice; // Export the model as the default export
