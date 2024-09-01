@@ -1,10 +1,13 @@
-// controllers/transactionController.js
-const Transaction = require('../models/Transaction');
-const Price = require('../models/Price');
+
+
+const Transaction = require('../models/modelTransaction');
+const Price = require('../models/modelPrice');
 const { getTransactions } = require('../services/etherscanService');
 const { getEthereumPrice } = require('../services/coingeckoService');
 
-const fetchTransactions = async (req, res) => {
+
+
+export const fetchTransactions = async (req, res) => {
   const { address } = req.params;
 
   try {
@@ -16,7 +19,9 @@ const fetchTransactions = async (req, res) => {
   }
 };
 
-const getUserExpenses = async (req, res) => {
+
+
+export const getUserExpenses = async (req, res) => {
   const { address } = req.params;
 
   try {
@@ -37,7 +42,4 @@ const getUserExpenses = async (req, res) => {
   }
 };
 
-module.exports = {
-  fetchTransactions,
-  getUserExpenses,
-};
+
