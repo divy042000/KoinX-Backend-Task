@@ -1,4 +1,12 @@
+const express = require('express');
+const {fetchTransactions,getUserExpenses} = require('../controllers/transactionController');
 
-const transactionRoutes = require('./routes/transactions');
+const router = express.Router();
 
-app.use('/api', transactionRoutes);
+router.get('/transactions/:address',fetchTransactions);
+router.get('/expenses/:address',getUserExpenses);
+
+
+module.exports = router;
+
+
