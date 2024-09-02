@@ -1,12 +1,11 @@
-const express = require('express');
-const transactionController = require('../controllers/transactionController');
+import express from 'express';
+import {fetchTransactions,getUserExpenses} from '../controllers/transactionController.js';
 
 const router = express.Router();
 
-router.get('/transactions/:address',transactionController.fetchTransactions);
-router.get('/expenses/:address',transactionController.getUserExpenses);
+
+router.get('/transactions/:address',fetchTransactions);
+router.get('/expenses/:address',getUserExpenses);
 
 
-module.exports = router;
-
-
+export default router;

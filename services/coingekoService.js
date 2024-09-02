@@ -12,6 +12,3 @@ export const getEthereumPrice = async () => {
   }
 };
 
-// getEthereumPrice()
-//   .then(price => console.log(`Current Ethereum price: ${price} INR`))
-//   .catch(error => console.error('Failed to get Ethereum price:', error));

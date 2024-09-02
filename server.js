@@ -2,16 +2,16 @@ import dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
 import {startCronJobs} from "./utility/cronJobs.js";
-
+import apiGateway from './routes/apiGateway.js'
+dotenv.config();
 const app = express();
-const port = process.env.PORT || 3000;
-
 app.use(express.json());
+app.use(apiGateway);
 
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+const port = process.env.PORT;
+const MONGO_URL = process.env.MONGO_URI;
+
+mongoose.connect(MONGO_URL,)
   .then(() => {
     console.log('Connected to MongoDB');
     startCronJobs();
