@@ -18,8 +18,6 @@ export const getTransactions = async (address) => {
     if (data.status !== "1") {
       throw new Error(`API Error: ${data.message}`);
     }
-
-    console.log("API Response:", data);
     return data.result;
   } catch (error) {
     console.error("Error fetching transactions:", error);
