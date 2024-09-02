@@ -36,7 +36,7 @@
 ## API Endpoints
 
 ### 1. Get transaction list associated with user
-- **Endpoint**: `/api/fetch/:address`
+- **Endpoint**: `/transactions/:address`
 - **Method**: `GET`
 - **Description**: Returns the list of transactions for this address.
 - **Path Parameters**:
@@ -44,9 +44,9 @@
 - **Example Request**:
 
   ```http
-  GET http://localhost:4000/api/fetch/0xYourEthereumAddress
+  GET http://localhost:4000/transactions/0xYourEthereumAddress
 ### 2. Get Total Expenses and Current Ether Price
-- **Endpoint**: `/api/expense/:address`
+- **Endpoint**: `/transactions/:address`
 - **Method**: `GET`
 - **Description**: Returns total expenses and current price of ether.
 - **Path Parameters**:
@@ -54,7 +54,7 @@
 - **Example Request**:
 
   ```http
-  GET http://localhost:3000/api/expense/0xYourEthereumAddress
+  GET http://localhost:4000/expenses/0xYourEthereumAddress
 ## production env API 
 ### 1. Get transaction list associated with user
 
