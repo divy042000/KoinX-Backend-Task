@@ -46,7 +46,7 @@
   ```http
   GET http://localhost:4000/transactions/0xYourEthereumAddress
 ### 2. Get Total Expenses and Current Ether Price
-- **Endpoint**: `/transactions/:address`
+- **Endpoint**: `/expenses/:address`
 - **Method**: `GET`
 - **Description**: Returns total expenses and current price of ether.
 - **Path Parameters**:
@@ -58,8 +58,8 @@
 ## production env API 
 ### 1. Get transaction list associated with user
 
-    GET https://koinx-assignment-pxit.onrender.com/api/fetch/0xYourEthereumAddress
+    GET https://koinx-backend-task.onrender.com/transactions/0xYourEthereumAddress
 ### 2. Get Total Expenses and Current Ether Price
-    GET https://koinx-assignment-pxit.onrender.com/api/expense/0xYourEthereumAddress
+    GET https://koinx-backend-task.onrender.com/expenses/0xYourEthereumAddress
 
   
